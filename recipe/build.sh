@@ -4,9 +4,6 @@ set -euxo pipefail
 # Build copybara using Bazel
 # Fetches Maven dependencies during build
 
-# Set up Bazel cache in a writable location
-export HOME="${SRC_DIR}"
-
 # Build the deploy JAR
 bazel build //java/com/google/copybara:copybara_deploy.jar \
     --java_runtime_version=21 \
@@ -83,7 +80,7 @@ mvn license:download-licenses \
     -DlicensesOutputDirectory="${SRC_DIR}/library_licenses/maven" \
     -DlicensesOutputFile="${SRC_DIR}/library_licenses/THIRD-PARTY.xml" \
     -DincludeTransitiveDependencies=true \
-    -q || true
+    -q
 
 cd "${SRC_DIR}"
 
