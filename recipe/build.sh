@@ -8,6 +8,8 @@ set -euxo pipefail
 bazel build //java/com/google/copybara:copybara_deploy.jar \
     --java_runtime_version=21 \
     --tool_java_runtime_version=21 \
+    --stamp \
+    --embed_label="${PKG_VERSION}" \
     --verbose_failures
 
 # Install the JAR

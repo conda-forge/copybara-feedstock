@@ -8,6 +8,8 @@ bazel "--output_user_root=%BAZEL_OUTPUT_USER_ROOT%" build //java/com/google/copy
     --java_runtime_version=21 ^
     --tool_java_runtime_version=21 ^
     --repo_contents_cache= ^
+    --stamp ^
+    --embed_label=%PKG_VERSION% ^
     --verbose_failures
 if errorlevel 1 exit /b 1
 
