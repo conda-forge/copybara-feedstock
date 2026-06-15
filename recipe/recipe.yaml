@@ -11,11 +11,11 @@ source:
 
 build:
   number: 0
-  skip:
-    - win
   script:
     - if: unix
       then: bash ${RECIPE_DIR}/build.sh
+    - if: win
+      then: call "%RECIPE_DIR%\build.bat"
 
 requirements:
   build:
