@@ -11,3 +11,7 @@ github:
 test: native_and_emulated
 bot:
   automerge: true
+workflow_settings:
+  store_build_artifacts:
+    - platform: win_64
+      value: true
