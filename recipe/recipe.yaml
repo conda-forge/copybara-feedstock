@@ -10,7 +10,7 @@ source:
   sha256: bc72bf354c732960966522c9ca2db1db714b3a899e6bc4a4ff9b49b9783f595f
 
 build:
-  number: 0
+  number: 1
   script:
     - if: unix
       then: bash ${RECIPE_DIR}/build.sh
@@ -32,6 +32,8 @@ requirements:
 
 tests:
   - script:
+      - if: win
+        then: where.exe copybara
       - copybara version
 
 about:
