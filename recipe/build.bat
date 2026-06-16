@@ -24,7 +24,7 @@ if not exist "%PREFIX%\bin" mkdir "%PREFIX%\bin"
   echo @echo off
   echo setlocal
   echo if "%%HOME%%"=="" set "HOME=%%USERPROFILE%%"
-  echo for %%%%I in ("%%~dp0..") do set "COPYBARA_PREFIX=%%%%~fI"
+  echo set "COPYBARA_PREFIX=%%~dp0.."
   echo set "JAVA_EXE=%%COPYBARA_PREFIX%%\Library\bin\java.exe"
   echo if not exist "%%JAVA_EXE%%" set "JAVA_EXE=java"
   echo "%%JAVA_EXE%%" -jar "%%COPYBARA_PREFIX%%\share\copybara\copybara_deploy.jar" %%*
