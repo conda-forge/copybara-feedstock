@@ -5,6 +5,6 @@ c_stdlib:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge copybara_dev
 target_platform:
 - win-64

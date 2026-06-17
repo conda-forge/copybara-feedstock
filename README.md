@@ -3,15 +3,19 @@ About copybara-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/copybara-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/google/copybara
+Home: https://github.com/ytausch/copybara
 
 Package license: Apache-2.0
 
-Summary: A tool for transforming and moving code between repositories
+Summary: A tool for transforming and moving code between repositories (dev release).
 
 Copybara is a tool used internally at Google to transform and move code
 between repositories. It is often used to maintain mirrored repositories
 between internal Google repositories and public GitHub repositories.
+
+This is a development release from a fork by @ytausch, which includes a fix
+that hasn't been merged upstream yet.
+See https://github.com/google/copybara/pull/346 for details.
 
 Current build status
 ====================
@@ -69,14 +73,14 @@ Current release info
 Installing copybara
 ===================
 
-Installing `copybara` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `copybara` from the `conda-forge/label/copybara_dev` channel can be achieved by adding `conda-forge/label/copybara_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/copybara_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `copybara` can be installed with `conda`:
+Once the `conda-forge/label/copybara_dev` channel has been enabled, `copybara` can be installed with `conda`:
 
 ```
 conda install copybara
@@ -91,26 +95,26 @@ mamba install copybara
 It is possible to list all of the versions of `copybara` available on your platform with `conda`:
 
 ```
-conda search copybara --channel conda-forge
+conda search copybara --channel conda-forge/label/copybara_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search copybara --channel conda-forge
+mamba search copybara --channel conda-forge/label/copybara_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search copybara --channel conda-forge
+mamba repoquery search copybara --channel conda-forge/label/copybara_dev
 
 # List packages depending on `copybara`:
-mamba repoquery whoneeds copybara --channel conda-forge
+mamba repoquery whoneeds copybara --channel conda-forge/label/copybara_dev
 
 # List dependencies of `copybara`:
-mamba repoquery depends copybara --channel conda-forge
+mamba repoquery depends copybara --channel conda-forge/label/copybara_dev
 ```
 
 

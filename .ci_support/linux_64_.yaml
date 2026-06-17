@@ -9,7 +9,7 @@ c_stdlib_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge copybara_dev
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 target_platform:
