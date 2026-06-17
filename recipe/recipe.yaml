@@ -1,16 +1,13 @@
-context:
-  version: "20260615"
-
 package:
   name: copybara
-  version: ${{ version }}
+  version: "20260615.dev0"
 
 source:
-  url: https://github.com/google/copybara/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: bc72bf354c732960966522c9ca2db1db714b3a899e6bc4a4ff9b49b9783f595f
+  url: https://github.com/ytausch/copybara/archive/c939804826bf60a3d95a45f9ea4d3a1a41ec74dc.tar.gz
+  sha256: 2a39792529474e184efad92cf0dea3833ffce8a813fd8474259d289dbeeb4f65
 
 build:
-  number: 1
+  number: 0
   script:
     - if: unix
       then: bash ${RECIPE_DIR}/build.sh
@@ -37,12 +34,16 @@ tests:
       - copybara version
 
 about:
-  homepage: https://github.com/google/copybara
-  summary: A tool for transforming and moving code between repositories
+  homepage: https://github.com/ytausch/copybara
+  summary: A tool for transforming and moving code between repositories (dev release).
   description: |
     Copybara is a tool used internally at Google to transform and move code
     between repositories. It is often used to maintain mirrored repositories
     between internal Google repositories and public GitHub repositories.
+
+    This is a development release from a fork by @ytausch, which includes a fix
+    that hasn't been merged upstream yet.
+    See https://github.com/google/copybara/pull/346 for details.
   license: Apache-2.0
   license_file:
     - LICENSE
