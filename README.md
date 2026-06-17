@@ -73,14 +73,14 @@ Current release info
 Installing copybara
 ===================
 
-Installing `copybara` from the `conda-forge/label/copybara_dev` channel can be achieved by adding `conda-forge/label/copybara_dev` to your channels with:
+Installing `copybara` from the `conda-forge/label/copybara_ytausch_dev` channel can be achieved by adding `conda-forge/label/copybara_ytausch_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/copybara_dev
+conda config --add channels conda-forge/label/copybara_ytausch_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/copybara_dev` channel has been enabled, `copybara` can be installed with `conda`:
+Once the `conda-forge/label/copybara_ytausch_dev` channel has been enabled, `copybara` can be installed with `conda`:
 
 ```
 conda install copybara
@@ -95,26 +95,26 @@ mamba install copybara
 It is possible to list all of the versions of `copybara` available on your platform with `conda`:
 
 ```
-conda search copybara --channel conda-forge/label/copybara_dev
+conda search copybara --channel conda-forge/label/copybara_ytausch_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search copybara --channel conda-forge/label/copybara_dev
+mamba search copybara --channel conda-forge/label/copybara_ytausch_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search copybara --channel conda-forge/label/copybara_dev
+mamba repoquery search copybara --channel conda-forge/label/copybara_ytausch_dev
 
 # List packages depending on `copybara`:
-mamba repoquery whoneeds copybara --channel conda-forge/label/copybara_dev
+mamba repoquery whoneeds copybara --channel conda-forge/label/copybara_ytausch_dev
 
 # List dependencies of `copybara`:
-mamba repoquery depends copybara --channel conda-forge/label/copybara_dev
+mamba repoquery depends copybara --channel conda-forge/label/copybara_ytausch_dev
 ```
 
 
