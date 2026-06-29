@@ -1,5 +1,5 @@
 context:
-  version: "20260615"
+  version: "20260629"
 
 package:
   name: copybara
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/google/copybara/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: bc72bf354c732960966522c9ca2db1db714b3a899e6bc4a4ff9b49b9783f595f
+  sha256: e100ae58d7eeb6e14c7f6d7bef80a16d58405d9bdec85e7e42b976aa5dd29b83
 
 build:
-  number: 1
+  number: 0
   script:
     - if: unix
       then: bash ${RECIPE_DIR}/build.sh
