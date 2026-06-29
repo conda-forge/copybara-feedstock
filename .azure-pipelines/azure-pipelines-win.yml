@@ -42,7 +42,7 @@ jobs:
         STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
 
     - script: |
-        set ARTIFACT_STAGING_DIR=$(Build.ArtifactStagingDirectory)
+        set ARTIFACT_STAGING_DIR=$(Build.ArtifactStagingDirectory
         set BLD_ARTIFACT_PREFIX=conda_artifacts
         set CI=azure
         set CI_RUN_ID=$(build.BuildNumber).$(system.JobAttempt)
