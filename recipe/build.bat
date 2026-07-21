@@ -1,5 +1,13 @@
 @echo on
 
+:: Keep build-tool caches outside SRC_DIR so Windows can remove the work tree.
+set "COPYBARA_USER_PROFILE=%TEMP%\copybara-user-profile-%PKG_VERSION%"
+set "USERPROFILE=%COPYBARA_USER_PROFILE%"
+set "LOCALAPPDATA=%COPYBARA_USER_PROFILE%\AppData\Local"
+set "APPDATA=%COPYBARA_USER_PROFILE%\AppData\Roaming"
+if not exist "%LOCALAPPDATA%" mkdir "%LOCALAPPDATA%"
+if not exist "%APPDATA%" mkdir "%APPDATA%"
+
 set "BAZEL_OUTPUT_USER_ROOT=%TEMP%\copybara-bazel-output"
 if not exist "%BAZEL_OUTPUT_USER_ROOT%" mkdir "%BAZEL_OUTPUT_USER_ROOT%"
 
