@@ -33,5 +33,11 @@ if not exist "%PREFIX%\bin" mkdir "%PREFIX%\bin"
 if errorlevel 1 exit /b 1
 
 :: Collect licenses from all dependencies.
+:: Keep PowerShell's caches outside SRC_DIR so Windows can remove the work tree.
+set "COPYBARA_APPDATA_ROOT=%TEMP%\copybara-appdata-%PKG_VERSION%"
+set "LOCALAPPDATA=%COPYBARA_APPDATA_ROOT%\Local"
+set "APPDATA=%COPYBARA_APPDATA_ROOT%\Roaming"
+if not exist "%LOCALAPPDATA%" mkdir "%LOCALAPPDATA%"
+if not exist "%APPDATA%" mkdir "%APPDATA%"
 powershell -NoProfile -ExecutionPolicy Bypass -File "%RECIPE_DIR%\collect_licenses.ps1"
 if errorlevel 1 exit /b 1
