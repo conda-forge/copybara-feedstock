@@ -1,5 +1,5 @@
 context:
-  version: "20260720"
+  version: "20260727"
 
 package:
   name: copybara
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/google/copybara/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: aeafd76d1c15434f7ff4bcb61bdbe4850cbac53e6e3c598e18c48cb6d6e29b23
+  sha256: 021984ff2bc9fda9a916c0ee644221b6f8f3eeda5092426bed64219e1a5d65de
 
 build:
   number: 0
